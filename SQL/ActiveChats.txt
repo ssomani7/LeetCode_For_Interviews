@@ -1,0 +1,47 @@
+Table Whatsapp:
+User_id	Send_id	Content	    Timestamp
+1		3		‘wassup’	2020-06-26 00:00:00
+2		5		xya		           “
+1		4		abc		           “
+1		3		what you doin	   “
+1		7		he		           “
+
+Table User:
+User_id	User_name	User_type
+1		Sourabh	    individual
+3		Friends	    group
+4		Umang		individual
+7		Aman		individual
+2		XYZ		    individual
+5		ABC		    individual
+
+Write a query to give the number of active chats for a user based on user type
+
+OUTPUT:
+
+User_id	User		Sent UserType	Number of active chats
+1		sourabh	    individual		2
+1		sourabh	    group			1
+2		XYZ		    Individual		1
+
+SQL Query:
+SELECT x.user_id, y.user_name, x.user_type, count(x.user_type) as a
+FROM
+(
+SELECT wapp.User_id as user_id, usr.User_type as user_type, wapp.Send_id as send_id
+FROM Whatsapp wapp 
+inner join
+User usr on
+wapp.Send_id = usr.User_id
+GROUP BY wapp.User_id, wapp.Send_id, usr.User_type
+) x
+inner join 
+User y
+on x.user_id = y.user_id
+GROUP BY x.user_id, x.user_type
+
+OUTPUT for INNER QUERY:
+1 | group | 3
+1 | individual | 4
+1 | individual | 7
+1 | individual | 5
