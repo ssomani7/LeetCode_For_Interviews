@@ -1,4 +1,4 @@
-package Depth_First_Search;
+package matrix_questions;
 
 /*
  * Time complexity : O(M × N) where M is the number of rows and N is the number of columns.
@@ -76,3 +76,4 @@ public class NumberOfIslands {
 	}
 
 }
+
