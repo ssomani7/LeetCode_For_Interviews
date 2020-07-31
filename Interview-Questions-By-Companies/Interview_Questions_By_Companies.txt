@@ -1,0 +1,38 @@
+
+Company = Fynd
+
+If the data that is being deposited into RedShift changes, how would you handle it?
+How would you ensure the data that is being deposited in the RedShift is error free?
+
+Company = GenPact
+
+What are procedure in SQL, write one for finding the city name.
+What are custom exception in Java, write one example.
+What is collection Framework? Draw the hierarchy
+Explain MVC workflow.
+List Iterator
+
+6) https://github.com/tyo07/HackerRankTests/blob/f69c808b124a0ec015c1264ca1855004668ed10c/src/main/java/TestSolution.java
+
+7) https://github.com/juanarmond/JobInterviews/blob/1626498c11c80972b6bbe2cf52ad311bba3fda01/Visa/DetectDomainName.java
+
+
+Company = Bloomberg
+
+Stream() and filter()? Is filter a terminal or intermediate operation?
+What are Intermediate and terminal operations? Give examples
+What is try-with-resources
+In Spring Boot, how does the “@Transaction” annotation work and what interface does it implement?
+What are functional interface in Java8?
+What is Optional class in Java8? For what is it used?
+Spring MVC flow? What does MVC represent in an architecture?
+What are Spring Beans? Give different types and explain
+What is Dependency Injection and Inversion of Control in Spring boot?
+How to read jar file content in Unix?
+How to read jar file content in Unix without the jar command?
+How to see what processes are running in unix?
+How do you get thread dump in Unix?
+How do you get Heap dump in Unix?
+Valid Paranethesis code.
+
+
