@@ -5,7 +5,8 @@ import java.util.Map;
 
 /*
  * Time Complexity = O(n)
- * Space Complexity = O(n)
+ * Space Complexity = O(1), because there are fixed number of lower case alphabets otherwise also it will
+ * be O(1), as there are only 256 characters in ASCII
  */
 
 /*
