@@ -3,7 +3,10 @@ package trie;
 /*
  * Time Complexity: 
  * addWord() - O(n), n = length of the new word
- * search() - Worst case: O(m), m = the total number of characters in the Trie
+ * search() - Below are the 2 functionalities
+ * Best case = O(n), when there is no dot in the search word.
+ * Worst case: O(n + 26^n), n = the total number of characters in the word. 26^n because we need to do 
+ * recursion using bactracking when a dot appears.
  * 
  * Space complexity : 
  * addWord() - O(m). In the worst case newly inserted key doesn't share a prefix with the the keys already
