@@ -1,7 +1,6 @@
 package stack_questions;
 
 import java.util.HashMap;
-import java.util.*;
 import java.util.Map;
 import java.util.Stack;
 
@@ -13,38 +12,7 @@ import java.util.Stack;
  * up pushing all the brackets onto the stack. e.g. ((((((((((.
  */
 
-/*
- * Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input 
- * string is valid.
- * 
- * An input string is valid if:
- * Open brackets must be closed by the same type of brackets.
- * Open brackets must be closed in the correct order.
- * Note that an empty string is also considered valid.
- * 
- * Example 1:
- * Input: "()"
- * Output: true
- * 
- * Example 2:
- * Input: "()[]{}"
- * Output: true
- * 
- * Example 3:
- * Input: "(]"
- * Output: false
- * 
- * Example 4:
- * Input: "([)]"
- * Output: false
- * 
- * Example 5:
- * Input: "{[]}"
- * Output: true
- */
-
-
-public class ValidParenthesis {
+public class ValidParenthesisWithExternalCharacters {
 
     public static boolean isValid(String s) {
         //edge case
@@ -60,7 +28,12 @@ public class ValidParenthesis {
         
         for(int index = 0; index < s.length(); index++){
             char ch = s.charAt(index);
-                        
+            
+            //Discard any character other than brackets.
+            if(!bracketMap.containsKey(ch) || bracketMap.get(')') != ch || bracketMap.get(']') != ch
+            		|| bracketMap.get('}') != ch)
+            	continue;
+            
             //Only pop from stack when you come across a closing 'bracket' while iterating String
             if(!stack.isEmpty() && bracketMap.containsKey(ch)){
                 //closing bracket match found
@@ -79,7 +52,7 @@ public class ValidParenthesis {
     }
     	
 	public static void main(String[] args) {
-		String s = "([)]";
+		String s = "[1, {3}, {4, (2 * (4 * 2) / 3)}]";
 		System.out.println(isValid(s));
 	}
 
