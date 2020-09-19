@@ -412,8 +412,7 @@ limit 1;
 
 
 
-/*Get the cohort number from the list of the employee table. For example the 
-*/
+/*Get the cohort number from the list of the employee table. For example the */
 
 Employees who have joined during the same time in ascending order are the cohort.
 //below will give you result for the second cohort
@@ -424,5 +423,7 @@ with cte as
   from sandbox.amantri.order_customer
 )
 select name,start_date from cte where d_rank = 2;
+
+
 
 
